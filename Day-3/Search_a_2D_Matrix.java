@@ -127,5 +127,5 @@ class Solution {
     }
 }
 // Complexity Analysis
-// Time Complexity -> O(log(n*m));
+// Time Complexity -> O(logn*logm);
 // Space Complexity -> O(1);
