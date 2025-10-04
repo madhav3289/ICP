@@ -34,15 +34,18 @@ class Solution {
         helper(ans,n,k,1,new ArrayList<>());
         return ans;
     }
-    public static void helper(List<List<Integer>> ans,int n,int k,int idx,List<Integer> temp){
-        if(temp.size()==k){
+    public static void helper(List<List<Integer>> ans,int n,int k,int st,List<Integer> temp){
+        if(k==0){
             ans.add(new ArrayList<>(temp));
+            return;
         }
-        for(int i=idx;i<=n;i++){
-            temp.add(i);
-            helper(ans,n,k,i+1,temp);
-            temp.remove(temp.size()-1);
+        if(k<0 || st>n){
+            return;
         }
+        temp.add(st);
+        helper(ans,n,k-1,st+1,temp);
+        temp.remove(temp.size()-1);
+        helper(ans,n,k,st+1,temp);
     }
 }
 
