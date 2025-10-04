@@ -51,7 +51,7 @@ class Solution {
 
 // COMPLEXITY ANALYSIS
 
-// Time Complexity -> O(C(n, k) × k)
+// Time Complexity -> O(C(n, k))
 // Space Complexity  -> O(k)        (excluding output list)
 
 // C(n, k) = n! / (k!(n-k)!)
